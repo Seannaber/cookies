@@ -41,8 +41,12 @@ function addchoco() {
 };
 
 function minchoco() {
-	$.cookie("choco", Number($.cookie("choco")) - 1);
-	$("#choco").html($.cookie("choco"));
+	if ($.cookie("choco") > 0) {
+		$.cookie("choco", Number($.cookie("choco")) - 1);
+		$("#choco").html($.cookie("choco"));
+	} else {
+		$("#choco").html($.cookie("choco"));
+	};
 };
 
 function addlemon() {
@@ -51,8 +55,12 @@ function addlemon() {
 };
 
 function minlemon() {
-	$.cookie("lemon", Number($.cookie("lemon")) - 1);
-	$("#lemon").html($.cookie("lemon"));
+	if ($.cookie("lemon") > 0) {
+		$.cookie("lemon", Number($.cookie("lemon")) - 1);
+		$("#lemon").html($.cookie("lemon"));
+	} else {
+		$("#lemon").html($.cookie("lemon"));
+	};
 };
 
 $("#deletecookies").click(function() {
