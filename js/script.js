@@ -15,7 +15,7 @@ if ($.cookie("choco") > 0) {
 };
 
 if ($.cookie("lemon") > 0) {
-	$("#lemon").html("You've eaten " + $.cookie("lemon") + " lemon cookies.");
+	$("#lemon").html($.cookie("lemon"));
 } else {
 	$.cookie("lemon", 0);
 };
@@ -44,12 +44,12 @@ function minchoco() {
 
 function addlemon() {
 	$.cookie("lemon", Number($.cookie("lemon")) + 1);
-	$("#lemon").html("You've eaten " + $.cookie("lemon") + " lemon cookies.");
+	$("#lemon").html($.cookie("lemon"));
 };
 
 function minlemon() {
 	$.cookie("lemon", Number($.cookie("lemon")) - 1);
-	$("#lemon").html("You've eaten " + $.cookie("lemon") + " lemon cookies.");
+	$("#lemon").html($.cookie("lemon"));
 };
 
 $("#deletecookies").click(function() {
@@ -58,7 +58,7 @@ $("#deletecookies").click(function() {
 	$.cookie("choco", 0);
 	$("#choco").html("You've eaten " + $.cookie("choco") + " chocolate cookies.");
 	$.cookie("lemon", 0);
-	$("#lemon").html("You've eaten " + $.cookie("lemon") + " lemon cookies.");
+	$("#lemon").html($.cookie("lemon"));
 });
 
 /*function deletecookies() {
