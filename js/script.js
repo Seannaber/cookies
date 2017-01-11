@@ -53,11 +53,11 @@ function minlemon() {
 };
 
 $("#deletecookies").click(function() {
-	$.cookie("sugar", null);
+	$.cookie("sugar", 0);
 	$("#sugar").html("You've eaten " + $.cookie("sugar") + " sugar cookies.");
-	$.cookie("choco", null);
+	$.cookie("choco", 0);
 	$("#choco").html("You've eaten " + $.cookie("choco") + " chocolate cookies.");
-	$.cookie("lemon", null);
+	$.cookie("lemon", 0);
 	$("#lemon").html("You've eaten " + $.cookie("lemon") + " lemon cookies.");
 });
 
