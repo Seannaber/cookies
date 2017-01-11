@@ -54,8 +54,11 @@ function minlemon() {
 
 $("#deletecookies").click(function() {
 	$.cookie("sugar", null);
+	$("#sugar").html("You've eaten " + $.cookie("sugar") + " sugar cookies.");
 	$.cookie("choco", null);
+	$("#sugar").html("You've eaten " + $.cookie("choco") + " chocolate cookies.");
 	$.cookie("lemon", null);
+	$("#sugar").html("You've eaten " + $.cookie("lemon") + " lemon cookies.");
 });
 
 /*function deletecookies() {
