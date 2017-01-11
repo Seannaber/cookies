@@ -3,13 +3,13 @@
 
 
 if ($.cookie("sugar") > 0) {
-	$("#sugar").html("You've eaten " + $.cookie("sugar") + " sugar cookies.");
+	$("#sugar").html($.cookie("sugar"));
 } else {
 	$.cookie("sugar", 0);
 };
 
 if ($.cookie("choco") > 0) {
-	$("#choco").html("You've eaten " + $.cookie("choco") + " chocolate cookies.");
+	$("#choco").html($.cookie("choco"));
 } else {
 	$.cookie("choco", 0);
 };
@@ -24,22 +24,22 @@ if ($.cookie("lemon") > 0) {
 
 function addsugar() {
 	$.cookie("sugar", Number($.cookie("sugar")) + 1);
-	$("#sugar").html("You've eaten " + $.cookie("sugar") + " sugar cookies.");
+	$("#sugar").html($.cookie("sugar"));
 };
 
 function minsugar() {
 	$.cookie("sugar", Number($.cookie("sugar")) - 1);
-	$("#sugar").html("You've eaten " + $.cookie("sugar") + " sugar cookies.");
+	$("#sugar").html($.cookie("sugar"));
 };
 
 function addchoco() {
 	$.cookie("choco", Number($.cookie("choco")) + 1);
-	$("#choco").html("You've eaten " + $.cookie("choco") + " chocolate cookies.");
+	$("#choco").html($.cookie("choco"));
 };
 
 function minchoco() {
 	$.cookie("choco", Number($.cookie("choco")) - 1);
-	$("#choco").html("You've eaten " + $.cookie("choco") + " chocolate cookies.");
+	$("#choco").html($.cookie("choco"));
 };
 
 function addlemon() {
@@ -54,9 +54,9 @@ function minlemon() {
 
 $("#deletecookies").click(function() {
 	$.cookie("sugar", 0);
-	$("#sugar").html("You've eaten " + $.cookie("sugar") + " sugar cookies.");
+	$("#sugar").html($.cookie("sugar"));
 	$.cookie("choco", 0);
-	$("#choco").html("You've eaten " + $.cookie("choco") + " chocolate cookies.");
+	$("#choco").html($.cookie("choco"));
 	$.cookie("lemon", 0);
 	$("#lemon").html($.cookie("lemon"));
 });
