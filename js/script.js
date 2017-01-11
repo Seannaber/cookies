@@ -21,19 +21,18 @@ if ($.cookie("lemon") > 0) {
 };
 
 
-
 function addsugar() {
+	$.cookie("sugar", Number($.cookie("sugar")) + 1);
+	$("#sugar").html($.cookie("sugar"));
+};
+
+function minsugar() {
 	if ($.cookie("sugar") > 0) {
-		$.cookie("sugar", Number($.cookie("sugar")) + 1);
+		$.cookie("sugar", Number($.cookie("sugar")) - 1);
 		$("#sugar").html($.cookie("sugar"));
 	} else {
 		$("#sugar").html($.cookie("sugar"));
 	};
-};
-
-function minsugar() {
-	$.cookie("sugar", Number($.cookie("sugar")) - 1);
-	$("#sugar").html($.cookie("sugar"));
 };
 
 function addchoco() {
