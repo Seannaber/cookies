@@ -33,7 +33,7 @@ function minsugar() {
 		$("#sugar").html($.cookie("sugar"));
 	} else {
 		$.cookie("choco", 0);
-	}
+	};
 };
 
 function addchoco() {
