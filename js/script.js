@@ -28,8 +28,12 @@ function addsugar() {
 };
 
 function minsugar() {
-	$.cookie("sugar", Number($.cookie("sugar")) - 1);
-	$("#sugar").html($.cookie("sugar"));
+	if Number($.cookie("sugar")) > 0 {
+		$.cookie("sugar", Number($.cookie("sugar")) - 1);
+		$("#sugar").html($.cookie("sugar"));
+	} else {
+		$.cookie("choco", 0);
+	}
 };
 
 function addchoco() {
